@@ -5,6 +5,9 @@ const switchEl = document.querySelector(".switch");
 const title = document.querySelector(".title");
 const copy = document.querySelector(".copy");
 
+// Clear textarea on loading
+inputEl.value = '';
+
 // Sumit button event listener
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
