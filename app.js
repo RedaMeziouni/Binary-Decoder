@@ -70,3 +70,26 @@ function textToBinary(input) {
 
   return output;
 }
+
+// Copy to clipboard
+copy.addEventListener("click", (e) => {
+  copyOutput();
+  e.target.innerHTML = `<ion-icon name="clipboard"></ion-icon>`;
+
+  setTimeout(() => {
+    e.target.innerHTML = `<ion-icon name="clipboard-outline"></ion-icon>`;
+  }, 1000);
+});
+
+function copyOutput() {
+  const textarea = document.createElement("textarea");
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "absolute";
+  textarea.style.top = "0";
+  textarea.value = outputEl.innerText;
+  document.body.appendChild(textarea);
+  textarea.select();
+  textarea.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(textarea);
+}
