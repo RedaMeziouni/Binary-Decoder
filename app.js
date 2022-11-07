@@ -36,7 +36,16 @@ switchEl.addEventListener("click", (e) => {
 });
 
 // Convert function
-function convert() {};
+function convert(type, inputValue) {
+  let output = "";
+  if (type === "binary") {
+    output = binaryToText(inputValue);
+    console.log(output);
+  } else if (type === "text") {
+    output = textToBinary(inputValue);
+  }
+  outputEl.innerText = output;
+}
 
 // Binary to Text conversion
 function binaryToText(input) {
@@ -48,7 +57,7 @@ function binaryToText(input) {
     .join("");
   console.log(input);
   return output;
-};
+}
 
 // Text to Binary conversion
 function textToBinary(input) {
@@ -60,4 +69,4 @@ function textToBinary(input) {
     .join(" ");
 
   return output;
-};
+}
