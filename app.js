@@ -14,4 +14,25 @@ formEl.addEventListener("submit", (e) => {
   convert(inputType, inputValue);
 });
 
-function convert() {};
+// Header text Switcher
+switchEl.addEventListener("click", (e) => {
+  const type = e.target.getAttribute("data-type");
+  inputEl.value = "";
+  outputEl.innerText = "";
+
+  if (type === "binary") {
+    e.target.setAttribute("data-type", "text");
+    inputEl.setAttribute("data-type", "text");
+    inputEl.setAttribute("placeholder", "Input Plain Text...");
+    outputEl.innerText = "Binary Output...";
+    title.innerText = "Text To Binary";
+  } else if (type === "text") {
+    e.target.setAttribute("data-type", "binary");
+    inputEl.setAttribute("data-type", "binary");
+    inputEl.setAttribute("placeholder", "Input Binary Code...");
+    outputEl.innerText = "Text Output...";
+    title.innerText = "Binary To Text";
+  }
+});
+
+function convert() {}
