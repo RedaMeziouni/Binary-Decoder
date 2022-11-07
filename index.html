@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Binary Decoder</title>
+  </head>
+  <body>
+    <!-- Main Section Start -->
+    <section>
+      <!-- Container -->
+      <div class="container">
+        <h1 class="title">Binary To Text</h1>
+        <br>
+        <hr>
+        <button type="button" class="switch" data-type="binary">Switch</button>
+        <form>
+          <!-- Input -->
+          <div class="input">
+            <textarea
+              name="input"
+              id="input"
+              cols="30"
+              rows="10"
+              data-type="binary"
+              placeholder="Input Binary Code..."
+            ></textarea>
+          </div>
+          <button type="submit">Convert</button>
+          <!-- Output -->
+          <div id="output">Text Output...</div>
+          <div class="copy">
+            <ion-icon name="clipboard-outline"></ion-icon>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Main Section End -->
+
+    <!-- Js -->
+    <script src="./app.js"></script>
+  </body>
+</html>
