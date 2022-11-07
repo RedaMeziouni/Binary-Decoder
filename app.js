@@ -35,4 +35,17 @@ switchEl.addEventListener("click", (e) => {
   }
 });
 
-function convert() {}
+// Convert function
+function convert() {};
+
+// Binary to Text conversion
+function binaryToText(input) {
+  let output = "";
+  output = input
+    .split(" ")
+    .map((number) => parseInt(number, 2))
+    .map((number) => String.fromCharCode(number))
+    .join("");
+  console.log(input);
+  return output;
+};
