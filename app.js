@@ -49,3 +49,15 @@ function binaryToText(input) {
   console.log(input);
   return output;
 };
+
+// Text to Binary conversion
+function textToBinary(input) {
+  let output = "";
+  output = input
+    .split("")
+    .map((latter) => latter.charCodeAt(0))
+    .map((latter) => latter.toString(2))
+    .join(" ");
+
+  return output;
+};
